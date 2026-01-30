@@ -1,0 +1,323 @@
+= Kotoshu Dictionaries
+
+Comprehensive spellchecking dictionary collection for the Kotoshu spellchecker library.
+
+image:https://img.shields.io/badge/license-MIT-blue.svg[License]
+image:https://img.shields.io/badge/dictionaries-92-blue.svg[Dictionary Count]
+image:https://img.shields.io/github/license/kotoshu/dictionaries.svg[GitHub License]
+
+== Introduction
+
+This repository contains a comprehensive collection of spellchecking dictionaries
+in multiple formats and languages, sourced from various reference implementations.
+
+* **Total Dictionaries:** 92+
+* **Languages Supported:** 50+
+* **Total Word Count:** 5,000,000+
+* **Formats:** Hunspell (.dic/.aff), Plain Text
+
+== Dictionary Sources
+
+This repository aggregates dictionaries from multiple high-quality sources:
+
+* https://github.com/wooorm/dictionaries[wooorm/dictionaries] - Hunspell dictionaries
+* FreeBSD `/usr/share/dict/` - Unix system dictionaries
+* Hunspell reference implementation tests
+* LanguageTool language modules
+
+=== Sourcing Policy
+
+All dictionaries are sourced from their original repositories with proper attribution
+and license information preserved. Each dictionary directory includes:
+
+* Original `license` file
+* `readme.md` with usage information
+* Source repository reference
+
+== Dictionary Organization
+
+Dictionaries are organized by:
+
+1. **Language Code** (e.g., `en-GB`, `de-AT`, `es-MX`)
+2. **Format Type** (Hunspell, Plain Text, etc.)
+
+=== Quick Reference
+
+.Language Availability
+[cols="1,1,4"]
+|===
+|Language | Dictionaries | Notes
+|===
+|English | en, en-AU, en-CA, en-GB, en-ZA, en-US-large | SCOWL-based, LGPL/MPL
+|German | de, de-AT, de-CH, de-DE | igerman98, GPL
+|Spanish | es, es-AR, es-BO, es-CO, es-CR, es-CU, es-DO, es-EC, es-GT, es-HN, es-MX, es-NI, es-PA, es-PE, es-PH, es-PR, es-PY, es-SV, es-US, es-UY, es-VE | LibreOffice, various licenses
+|French | fr, fr-FR | MPL 2.0
+|Italian | it | GPL 3
+|Portuguese | pt, pt-PT | LGPLv3 + MPL
+|Dutch | nl | Revised BSD + CC BY 3.0
+|Polish | pl | GPL/LGPL/MPL/CC
+|Russian | ru | BSD-style
+|Ukrainian | uk | GPL
+|Belarusian | be | GPL
+|Catalan | ca, ca-valencia | GPL
+|Czech | cs | GPL
+|Slovak | sk | GPL
+|Croatian | hr | GPL
+|Serbian | sr, sr-Latn | GPL
+|Slovenian | sl | GPL
+|Lithuanian | lt, ltg | GPL
+|Latvian | lv | GPL
+|Estonian | et | GPL
+|Greek | el, el-polyton | GPL
+|Turkish | tr | GPL
+|Hungarian | hu | GPL
+|Romanian | ro | GPL
+|Bulgarian | bg | GPL
+|Danish | da | GPL
+|Swedish | sv, sv-FI | GPL
+|Norwegian | nb, nn | GPL
+|Finnish | fi | GPL
+|Icelandic | is | GPL
+|Irish | ga | GPL
+|Scottish Gaelic | gd | GPL
+|Breton | br | GPL
+|Welsh | cy | GPL
+|Latvian | ltg | GPL
+|Faroese | fo | GPL
+|Western Frisian | fy | GPL
+|Galician | gl | GPL
+|Kurdish | ku | GPL
+|Armenian | hy, hyw | GPL
+|Georgian | ka | GPL
+|Korean | ko | GPL
+|Vietnamese | vi | GPL
+|Hebrew | he | GPL
+|Persian | fa | GPL
+|Esperanto | eo | GPL
+|Interlingua | ia | GPL
+|Manx | gv | GPL
+|Luxembourgish | lb | GPL
+|West Frisian | fy | GPL
+|Limburgish | li | GPL
+|===
+
+== Usage
+
+=== Loading from URL (Recommended)
+
+All dictionaries can be loaded directly from GitHub:
+
+[source,ruby]
+----
+# PlainText format
+dict = Kotoshu::Dictionary::PlainText.new(
+  "https://raw.githubusercontent.com/kotoshu/dictionaries/main/unix-words/web2.txt",
+  language_code: "en-US"
+)
+
+# Hunspell format
+dict = Kotoshu::Dictionary::Hunspell.new(
+  dic_path: "https://raw.githubusercontent.com/kotoshu/dictionaries/main/en-GB/index.dic",
+  aff_path: "https://raw.githubusercontent.com/kotoshu/dictionaries/main/en-GB/index.aff",
+  language_code: "en-GB"
+)
+----
+
+=== Loading from Local File
+
+[source,ruby]
+----
+dict = Kotoshu::Dictionary::Hunspell.new(
+  dic_path: "dictionaries/en-GB/index.dic",
+  aff_path: "dictionaries/en-GB/index.aff",
+  language_code: "en-GB"
+)
+----
+
+== Dictionary Categories
+
+=== Hunspell Format Dictionaries
+
+Primary format for morphological spellchecking with affix support.
+
+==== Source: wooorm/dictionaries
+
+.Hunspell Dictionaries (92 dictionaries)
+[cols="2,2,3"]
+|===
+|Code |Dictionary |License | Size
+|===
+|en | US English | SCOWL (LGPL/MPL/GPL) | ~500K words
+|en-GB | British English (ise) | SCOWL (LGPL/MPL/GPL) | ~450K words
+|en-CA | Canadian English | SCOWL (LGPL/MPL/GPL) | ~300K words
+|en-AU | Australian English | SCOWL (LGPL/MPL/GPL) | ~250K words
+|en-ZA | South African English | SCOWL (LGPL/MPL/GPL) | ~200K words
+|de | German | GPL (igerman98) | ~300K words
+|de-AT | German (Austria) | GPL (igerman98) | ~200K words
+|de-CH | German (Switzerland) | GPL (igerman98) | ~200K words
+|fr | French | MPL 2.0 | ~200K words
+|es | Spanish | LibreOffice | ~500K words
+|it | Italian | GPL 3 | ~500K words
+|pt | Portuguese | LGPLv3 + MPL | ~400K words
+|ru | Russian | BSD-style | ~800K words
+|nl | Dutch | Revised BSD + CC BY 3.0 | ~400K words
+|pl | Polish | GPL/LGPL/MPL/CC | ~600K words
+|... | ... | ... | ...
+|===
+
+==== Repository Information
+
+* **Source:** https://github.com/wooorm/dictionaries
+* **Format:** Hunspell (.dic/.aff pairs)
+* **License:** MIT for repository, varies per dictionary
+* **Maintainer:** Titus Wormer
+
+=== Unix System Dictionaries
+
+Plain text dictionaries from FreeBSD/BSD systems.
+
+==== Webster's Second International (1934)
+
+[cols="1,3,3"]
+|===
+|File |Description |License
+|===
+|web2.txt | 235,976 English words | Public Domain (lapsed copyright)
+|web2a.txt | 50,000+ words with affix flags | Public Domain
+|connectives.txt | English connectives | Public Domain
+|propernames.txt | Proper names | Public Domain
+|===
+
+==== Repository Information
+
+* **Source:** FreeBSD `/usr/share/dict/`
+* **License:** Public Domain (1934 copyright lapsed)
+* **Format:** Plain text (one word per line)
+
+== License Summary
+
+=== Overall Repository License
+
+The kotoshu/dictionaries repository is licensed under the MIT License.
+See link:LICENSE[LICENSE] file for details.
+
+=== Individual Dictionary Licenses
+
+Each dictionary has its own license. See the `license` file in each
+dictionary directory for specific terms.
+
+.General license categories:
+
+* **Public Domain:** Unix system dictionaries (web2, web2a)
+* **GPL/ LGPL:** Most Hunspell dictionaries
+* **MPL (Mozilla Public License):** French, Portuguese
+* **CC BY (Creative Commons Attribution):** Dutch
+* **MIT:** wooorm/dictionaries aggregation
+
+.Please check individual dictionary licenses before use in production.
+
+=== Attribution
+
+Dictionaries are sourced from and attributed to:
+
+* **SCOWL (Spell Checker Oriented Word Lists):** http://wordlist.sourceforge.net
+* **igerman98:** Björn Jacke
+* **LibreOffice:** Various contributors
+* **Grammalecte:** Olivier R. (French)
+* **OpenTaal:** https://opentaal.org (Dutch)
+* **Polish Native Lang Project:** http://pl.openoffice.org
+* **And many others...**
+
+See individual dictionary directories for complete attribution.
+
+== Format Specifications
+
+=== Hunspell Format
+
+The Hunspell format consists of two files:
+
+**Dictionary File (.dic):**
+----
+5
+hello/NN
+world/NN
+ruby
+----
+
+**Affix File (.aff):**
+----
+SET UTF-8
+FLAG N
+SFX N Y 1 s
+----
+
+Where:
+* First line = word count
+* `word/flags` = word with morphological flags
+* `FLAG` = defines flag characters
+* `SFX/PFX` = suffix/prefix rules
+
+=== Plain Text Format
+
+Simple line-separated words:
+
+----
+hello
+world
+ruby
+----
+
+* One word per line
+* Comments start with `#`
+* Empty lines ignored
+* UTF-8 or ASCII encoding
+
+== Dictionary Statistics
+
+[cols="1,1,1,1,1"]
+|===
+|Category | Count | Languages | Total Words | Size
+|===
+|Hunspell (wooorm) | 92 | 50+ | ~5,000,000 | ~50MB
+|Unix System | 4 | 1 | ~290,000 | ~3.4MB
+|Total | 96+ | 50+ | ~5,290,000 | ~53MB
+|===
+
+== Contributing
+
+To add new dictionaries:
+
+1. Ensure proper licensing and attribution
+2. Include `license` file in dictionary directory
+3. Add `readme.md` with source information
+4. Organize by language code and format
+5. Submit pull request
+
+== Links
+
+* **Main Project:** https://github.com/kotoshu/kotoshu
+* **Dictionary Repository:** https://github.com/kotoshu/dictionaries
+* **Hunspell:** https://hunspell.github.io/
+* **SCOWL:** http://wordlist.sourceforge.net
+* **wooorm/dictionaries:** https://github.com/wooorm/dictionaries
+
+== Changelog
+
+=== Version 2.0 (2026-01-30)
+
+* Added 92 Hunspell dictionaries from wooorm/dictionaries
+* Comprehensive licensing documentation
+* Grouped by language and origin
+* Total: 5,000,000+ words in 50+ languages
+
+=== Version 1.0 (2026-01-29)
+
+* Initial release with Unix system dictionaries
+* Webster's Second International (web2, web2a)
+* Hunspell test dictionaries
+* LanguageTool dictionaries (partial)
+
+== Contact
+
+* **Repository:** https://github.com/kotoshu/dictionaries
+* **Issues:** https://github.com/kotoshu/dictionaries/issues
