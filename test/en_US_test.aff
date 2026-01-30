@@ -1,0 +1,27 @@
+SET UTF-8
+TRY esianrtolcdugmphbyfvkwzESIANRTOLCDUGMPHBYFVKWZ'
+
+# Noun suffixes
+SFX N Y 1
+SFX N 0 s .
+
+# Verb suffixes
+SFX V Y 4
+SFX V 0 ing .
+SFX V 0 s .
+SFX V 0 ed .
+SFX V y ied y
+
+# Adjective suffixes
+SFX J Y 2
+SFX J 0 er .
+SFX J 0 est .
+
+# Prefixes
+PFX P Y 1
+PFX re 0 re .
+
+# Compound rules
+COMPOUNDRULE 2
+COMPOUNDMIN 1
+ONLYINCOMPOUND c

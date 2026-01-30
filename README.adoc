@@ -3,7 +3,7 @@
 Comprehensive spellchecking dictionary collection for the Kotoshu spellchecker library.
 
 image:https://img.shields.io/badge/license-MIT-blue.svg[License]
-image:https://img.shields.io/badge/dictionaries-92-blue.svg[Dictionary Count]
+image:https://img.shields.io/badge/dictionaries-93-blue.svg[Dictionary Count]
 image:https://img.shields.io/github/license/kotoshu/dictionaries.svg[GitHub License]
 
 == Introduction
@@ -11,9 +11,9 @@ image:https://img.shields.io/github/license/kotoshu/dictionaries.svg[GitHub Lice
 This repository contains a comprehensive collection of spellchecking dictionaries
 in multiple formats and languages, sourced from various reference implementations.
 
-* **Total Dictionaries:** 92+
+* **Total Dictionaries:** 93+
 * **Languages Supported:** 50+
-* **Total Word Count:** 5,000,000+
+* **Total Word Count:** 5,300,000+
 * **Formats:** Hunspell (.dic/.aff), Plain Text
 
 == Dictionary Sources
@@ -53,7 +53,7 @@ Dictionaries are organized by:
 |Spanish | es, es-AR, es-BO, es-CO, es-CR, es-CU, es-DO, es-EC, es-GT, es-HN, es-MX, es-NI, es-PA, es-PE, es-PH, es-PR, es-PY, es-SV, es-US, es-UY, es-VE | LibreOffice, various licenses
 |French | fr, fr-FR | MPL 2.0
 |Italian | it | GPL 3
-|Portuguese | pt, pt-PT | LGPLv3 + MPL
+|Portuguese | pt, pt-BR, pt-PT | LGPLv3 + MPL
 |Dutch | nl | Revised BSD + CC BY 3.0
 |Polish | pl | GPL/LGPL/MPL/CC
 |Russian | ru | BSD-style
@@ -159,6 +159,7 @@ Primary format for morphological spellchecking with affix support.
 |es | Spanish | LibreOffice | ~500K words
 |it | Italian | GPL 3 | ~500K words
 |pt | Portuguese | LGPLv3 + MPL | ~400K words
+|pt-BR | Portuguese (Brazilian) | LGPLv3 + MPL | ~300K words
 |ru | Russian | BSD-style | ~800K words
 |nl | Dutch | Revised BSD + CC BY 3.0 | ~400K words
 |pl | Polish | GPL/LGPL/MPL/CC | ~600K words
@@ -193,6 +194,19 @@ Plain text dictionaries from FreeBSD/BSD systems.
 * **Source:** FreeBSD `/usr/share/dict/`
 * **License:** Public Domain (1934 copyright lapsed)
 * **Format:** Plain text (one word per line)
+
+=== Test Dictionaries
+
+Dictionaries for testing spellchecker implementations.
+
+[cols="1,3,3"]
+|===
+|File |Description |License
+|test/en_US_test | Minimal US English test dictionary | Public Domain
+|test/test | Generic test dictionary | Public Domain
+|===
+
+Test dictionaries contain minimal word lists for verifying spellchecker functionality during development and testing.
 
 == License Summary
 
@@ -278,9 +292,10 @@ ruby
 |===
 |Category | Count | Languages | Total Words | Size
 |===
-|Hunspell (wooorm) | 92 | 50+ | ~5,000,000 | ~50MB
+|Hunspell (wooorm) | 93 | 50+ | ~5,300,000 | ~50MB
 |Unix System | 4 | 1 | ~290,000 | ~3.4MB
-|Total | 96+ | 50+ | ~5,290,000 | ~53MB
+|Test Dictionaries | 2 | 1 | ~100 | ~1KB
+|Total | 99+ | 50+ | ~5,590,000 | ~53MB
 |===
 
 == Contributing
@@ -302,6 +317,12 @@ To add new dictionaries:
 * **wooorm/dictionaries:** https://github.com/wooorm/dictionaries
 
 == Changelog
+
+=== Version 2.1 (2026-01-30)
+
+* Added Portuguese (Brazilian) dictionary (pt-BR) from VERO project
+* Added test dictionaries for spellchecker development
+* Total: 93+ dictionaries, 5,300,000+ words
 
 === Version 2.0 (2026-01-30)
 
