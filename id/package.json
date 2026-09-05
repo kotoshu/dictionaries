@@ -1,0 +1,24 @@
+{
+  "name": "dictionary-id",
+  "version": "2022.9.21",
+  "description": "Indonesian spelling dictionary",
+  "license": "LGPL-3.0-only",
+  "keywords": [
+    "dictionary",
+    "id",
+    "indonesian",
+    "hunspell",
+    "myspell",
+    "spelling"
+  ],
+  "source": "https://github.com/shuLhan/hunspell-id",
+  "repository": "https://github.com/LibreOffice/dictionaries/tree/master/id",
+  "author": "Shulhan <ms@kilabit.info>",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.aff",
+    "index.dic",
+    "index.js"
+  ]
+}

@@ -1,10 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-06-26T05:34:48Z",
+  "generated_at": "2026-09-05T11:00:08Z",
   "repo_version": "v1",
-  "resource_count": 279,
-  "language_count": 93,
+  "resource_count": 285,
+  "language_count": 95,
   "resources": {
+    "ar/index.aff": {
+      "size": 86949,
+      "sha256": "cec30b8621001e49618feb05aec1984c5fcfbf7d2ec309901d5cbf66585217a3",
+      "language": "ar",
+      "type": "spelling",
+      "license": "(GPL-2.0 OR LGPL-2.1 OR MPL-1.1)",
+      "source": "https://github.com/LibreOffice/dictionaries/tree/master/ar"
+    },
+    "ar/index.dic": {
+      "size": 7217161,
+      "sha256": "2a3e5367f61c1583734db9d66734f5603e6be5c2d227cf5c5cd7e4ca586e34fe",
+      "language": "ar",
+      "type": "spelling",
+      "license": "(GPL-2.0 OR LGPL-2.1 OR MPL-1.1)",
+      "source": "https://github.com/LibreOffice/dictionaries/tree/master/ar"
+    },
+    "ar/index.js": {
+      "size": 541,
+      "sha256": "dc5dde4bbc416db5e9abdc65779b06b90ad804fa43a8cc8856d338a000dcf873",
+      "language": "ar",
+      "type": "spelling",
+      "license": "(GPL-2.0 OR LGPL-2.1 OR MPL-1.1)",
+      "source": "https://github.com/LibreOffice/dictionaries/tree/master/ar"
+    },
     "bg/index.aff": {
       "size": 58189,
       "sha256": "cb6bfc56d6b1e70c812061086d7ec5ad6aaf6d35acd927a035f1cee0188ea477",
@@ -1356,6 +1380,30 @@
       "type": "spelling",
       "license": "GPL-3.0",
       "source": "https://github.com/wooorm/dictionaries/tree/main/dictionaries/ia"
+    },
+    "id/index.aff": {
+      "size": 15274,
+      "sha256": "c625d5b237a489c452cf1f9c666600103e8093667dff89e7030a24217995dc79",
+      "language": "id",
+      "type": "spelling",
+      "license": "LGPL-3.0-only",
+      "source": "https://github.com/shuLhan/hunspell-id"
+    },
+    "id/index.dic": {
+      "size": 453700,
+      "sha256": "775ff17a52801f3d2ee80120952fb44cc9bac6c3cf61740de775e439851a5803",
+      "language": "id",
+      "type": "spelling",
+      "license": "LGPL-3.0-only",
+      "source": "https://github.com/shuLhan/hunspell-id"
+    },
+    "id/index.js": {
+      "size": 541,
+      "sha256": "dc5dde4bbc416db5e9abdc65779b06b90ad804fa43a8cc8856d338a000dcf873",
+      "language": "id",
+      "type": "spelling",
+      "license": "LGPL-3.0-only",
+      "source": "https://github.com/shuLhan/hunspell-id"
     },
     "ie/index.aff": {
       "size": 5686,
