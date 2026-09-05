@@ -1,0 +1,28 @@
+{
+  "name": "dictionary-ar",
+  "version": "3.5.0",
+  "description": "Arabic spelling dictionary",
+  "license": "(GPL-2.0 OR LGPL-2.1 OR MPL-1.1)",
+  "keywords": [
+    "dictionary",
+    "ar",
+    "arabic",
+    "hunspell",
+    "myspell",
+    "spelling"
+  ],
+  "source": "https://github.com/LibreOffice/dictionaries/tree/master/ar",
+  "repository": "https://github.com/LibreOffice/dictionaries/tree/master/ar",
+  "author": "Mohamed Kebdani <med.kebdani@gmail.com>",
+  "contributors": [
+    "Mohamed Kebdani",
+    "Taha Zerrouki (Arabic thesaurus)"
+  ],
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.aff",
+    "index.dic",
+    "index.js"
+  ]
+}
