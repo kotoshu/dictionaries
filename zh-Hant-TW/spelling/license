@@ -1,0 +1,5 @@
+wordfreq data: MIT (https://github.com/rspeer/wordfreq)
+wordfreq underlying corpora: CC BY-SA (OpenSubtitles 2018, GlobalVoices, Wikipedia)
+g0v/moedict-data (Taiwan MOE 國語辭典): Taiwan Government Open Data License 1.0
+CC-CEDICT (validation): CC BY-SA 4.0
+OpenCC: Apache-2.0
