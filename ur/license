@@ -1,0 +1,4 @@
+The dictionary package (compiled word list) is released under BSD-3-Clause for the package scaffolding.
+
+The underlying lexical data derives from CLE licensed resources:
+CLE Urdu Digest Corpus 1M (CLE12T003) and CLE Urdu WordNet (CLE12L001), Center for Language Engineering, Al-Khawarizmi Institute of Computer Science, UET Lahore. Released as a spell-checker dictionary package under Schedule C of the executed Ribose-CLE Linguistic Resource License Agreement (2026-10-29); the underlying Linguistic Resources remain proprietary to CLE-KICS, UET and are not redistributed by this package.

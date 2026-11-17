@@ -1,0 +1,19 @@
+{
+  "name": "dictionary-ur",
+  "version": "1.0.0",
+  "description": "Urdu spelling dictionary",
+  "license": "SEE LICENSE IN license",
+  "keywords": [
+    "dictionary",
+    "ur",
+    "hunspell",
+    "myspell",
+    "spelling",
+    "urdu"
+  ],
+  "type": "module",
+  "files": [
+    "index.aff",
+    "index.dic"
+  ]
+}
