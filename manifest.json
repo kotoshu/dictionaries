@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "generated_at": "2026-09-21T22:38:52Z",
+  "generated_at": "2026-11-18T02:02:10Z",
   "repo_version": "v1",
-  "resource_count": 285,
-  "language_count": 95,
+  "resource_count": 287,
+  "language_count": 96,
   "resources": {
     "ar/index.aff": {
       "size": 86949,
@@ -2256,6 +2256,20 @@
       "type": "spelling",
       "license": "GPL-3.0",
       "source": "https://github.com/wooorm/dictionaries/tree/main/dictionaries/uk"
+    },
+    "ur/index.aff": {
+      "size": 93,
+      "sha256": "80d186a72d6882a37e923807748498c65110f14eff488efbe4c635f190d813ef",
+      "language": "ur",
+      "type": "spelling",
+      "license": "SEE LICENSE IN license"
+    },
+    "ur/index.dic": {
+      "size": 142648,
+      "sha256": "3423038f840cd17e3fd9345c8bff1ece80cf6aa1c315336769956c49d865f667",
+      "language": "ur",
+      "type": "spelling",
+      "license": "SEE LICENSE IN license"
     },
     "vi/index.aff": {
       "size": 1081,
